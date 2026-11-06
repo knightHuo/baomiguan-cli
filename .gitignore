@@ -1,0 +1,14 @@
+.venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+build/
+dist/
+*.spec
+*.egg-info/
+credentials.json
+.env
+*.log
+node_modules/
+.playwright-cli/

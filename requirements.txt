@@ -1,0 +1,5 @@
+rich>=14,<15
+requests>=2.32,<3
+keyring>=25.6,<26
+pycryptodome>=3.23,<5
+qrcode>=8.2,<9

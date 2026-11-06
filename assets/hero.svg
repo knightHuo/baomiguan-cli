@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="420" viewBox="0 0 1280 420" role="img" aria-labelledby="title desc">
+  <title id="title">保密观 · 简单终端版</title>
+  <desc id="desc">双击运行，扫码登录，按 Enter 开始。年度自动发现、清晰任务进度、本机凭据保护。</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#101e2b"/><stop offset="1" stop-color="#163e42"/></linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#e1c59e"/><stop offset="1" stop-color="#93cfc1"/></linearGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#b4d5cf" stroke-opacity=".05"/></pattern>
+  </defs>
+  <rect width="1280" height="420" rx="18" fill="url(#bg)"/>
+  <rect width="1280" height="420" rx="18" fill="url(#grid)"/>
+  <circle cx="1160" cy="40" r="235" fill="#70aa9d" opacity=".06"/>
+  <circle cx="1160" cy="40" r="180" fill="none" stroke="#a8c9bd" opacity=".09"/>
+  <path d="M72 80h32" stroke="#d9c09c" stroke-width="3" stroke-linecap="round"/>
+  <text x="118" y="86" fill="#b7cec9" font-size="15" letter-spacing="3" font-family="Arial,sans-serif">BAOMIGUAN CLI</text>
+  <text x="72" y="168" fill="#f5f3eb" font-size="48" font-weight="600" font-family="Microsoft YaHei,PingFang SC,Arial,sans-serif">保密观 · 简单终端版</text>
+  <text x="74" y="222" fill="#cad7d3" font-size="22" font-family="Microsoft YaHei,PingFang SC,Arial,sans-serif">双击运行，扫码登录，按 Enter 开始。</text>
+  <text x="74" y="282" fill="#9bb8b1" font-size="16" font-family="Microsoft YaHei,PingFang SC,Arial,sans-serif">年度自动发现</text>
+  <circle cx="207" cy="276" r="2" fill="#c7b58f"/>
+  <text x="226" y="282" fill="#9bb8b1" font-size="16" font-family="Microsoft YaHei,PingFang SC,Arial,sans-serif">主菜单按回车</text>
+  <circle cx="359" cy="276" r="2" fill="#c7b58f"/>
+  <text x="378" y="282" fill="#9bb8b1" font-size="16" font-family="Microsoft YaHei,PingFang SC,Arial,sans-serif">本机凭据保护</text>
+  <rect x="74" y="331" width="163" height="30" rx="15" fill="#b9d6c8" fill-opacity=".1" stroke="#b9d6c8" stroke-opacity=".18"/>
+  <text x="96" y="351" fill="#c1d8cc" font-size="12" font-family="Arial,sans-serif" letter-spacing="1">OPEN SOURCE · MIT</text>
+  <g transform="translate(965 126)">
+    <rect width="192" height="176" rx="17" fill="#132e35" stroke="#90b8ae" stroke-opacity=".35"/>
+    <path d="M0 38H192" stroke="#90b8ae" stroke-opacity=".25"/>
+    <circle cx="20" cy="19" r="3" fill="#c8ac87"/>
+    <circle cx="34" cy="19" r="3" fill="#8ea99b"/>
+    <circle cx="48" cy="19" r="3" fill="#678b84"/>
+    <path d="m27 68 17 13-17 13m31 0h23" stroke="url(#accent)" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M26 121H164M26 141H115" stroke="#72978f" stroke-opacity=".55" stroke-width="5" stroke-linecap="round"/>
+  </g>
+</svg>

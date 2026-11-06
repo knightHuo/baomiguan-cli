@@ -1,0 +1,42 @@
+name: Windows release
+
+on:
+  push:
+    tags: ["v*"]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - run: python -m pip install -r requirements.txt pytest ruff pyinstaller
+      - run: python -m ruff check .
+      - run: python -m pytest -q
+      - name: Check tag matches application version
+        if: startsWith(github.ref, 'refs/tags/')
+        shell: pwsh
+        run: |
+          $appVersion = python -c "from baomiguan import __version__; print(__version__)"
+          if ($env:GITHUB_REF_NAME -ne "v$appVersion") { throw "Tag does not match application version" }
+      - run: python scripts/build.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: Baomiguan-Windows
+          path: |
+            dist/Baomiguan.exe
+            dist/SHA256SUMS
+      - name: Publish release
+        if: startsWith(github.ref, 'refs/tags/')
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: pwsh
+        run: |
+          gh release create "$env:GITHUB_REF_NAME" dist/Baomiguan.exe dist/SHA256SUMS --verify-tag --generate-notes --title "保密观终端版 $env:GITHUB_REF_NAME"
